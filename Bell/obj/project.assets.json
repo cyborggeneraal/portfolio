@@ -796,11 +796,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Q#\\Pws\\Bell\\Bell.csproj",
+      "projectUniqueName": "D:\\git\\portofolio\\portfolio\\Bell\\Bell.csproj",
       "projectName": "Bell",
-      "projectPath": "D:\\Q#\\Pws\\Bell\\Bell.csproj",
+      "projectPath": "D:\\git\\portofolio\\portfolio\\Bell\\Bell.csproj",
       "packagesPath": "C:\\Users\\alexv\\.nuget\\packages\\",
-      "outputPath": "D:\\Q#\\Pws\\Bell\\obj\\",
+      "outputPath": "D:\\git\\portofolio\\portfolio\\Bell\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

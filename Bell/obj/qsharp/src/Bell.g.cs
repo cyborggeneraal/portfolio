@@ -4,8 +4,8 @@ using Microsoft.Quantum.Primitive;
 using Microsoft.Quantum.Simulation.Core;
 using Microsoft.Quantum.MetaData.Attributes;
 
-[assembly: OperationDeclaration("Bell", "Set (desired : Result, q1 : Qubit) : ()", new string[] { }, "D:\\Q#\\Pws\\Bell\\Operation.qs", 152L, 7L, 5L)]
-[assembly: OperationDeclaration("Bell", "BellTest (count : Int, initial : Result) : (Int, Int)", new string[] { }, "D:\\Q#\\Pws\\Bell\\Operation.qs", 398L, 20L, 5L)]
+[assembly: OperationDeclaration("Bell", "Set (desired : Result, q1 : Qubit) : ()", new string[] { }, "D:\\git\\portofolio\\portfolio\\Bell\\Bell.qs", 152L, 7L, 5L)]
+[assembly: OperationDeclaration("Bell", "BellTest (count : Int, initial : Result) : (Int, Int)", new string[] { }, "D:\\git\\portofolio\\portfolio\\Bell\\Bell.qs", 398L, 20L, 5L)]
 #line hidden
 namespace Bell
 {
@@ -47,12 +47,12 @@ namespace Bell
         public override Func<(Result,Qubit), QVoid> Body => (__in) =>
         {
             var (desired,q1) = __in;
-#line 10 "D:\\Q#\\Pws\\Bell\\Operation.qs"
+#line 10 "D:\\git\\portofolio\\portfolio\\Bell\\Bell.qs"
             var current = M.Apply(q1);
-#line 12 "D:\\Q#\\Pws\\Bell\\Operation.qs"
+#line 12 "D:\\git\\portofolio\\portfolio\\Bell\\Bell.qs"
             if ((desired != current))
             {
-#line 14 "D:\\Q#\\Pws\\Bell\\Operation.qs"
+#line 14 "D:\\git\\portofolio\\portfolio\\Bell\\Bell.qs"
                 MicrosoftQuantumPrimitiveX.Apply(q1);
             }
 
@@ -134,34 +134,34 @@ namespace Bell
         public override Func<(Int64,Result), (Int64,Int64)> Body => (__in) =>
         {
             var (count,initial) = __in;
-#line 23 "D:\\Q#\\Pws\\Bell\\Operation.qs"
+#line 23 "D:\\git\\portofolio\\portfolio\\Bell\\Bell.qs"
             var numOnes = 0L;
-#line 24 "D:\\Q#\\Pws\\Bell\\Operation.qs"
+#line 24 "D:\\git\\portofolio\\portfolio\\Bell\\Bell.qs"
             var qubits = Allocate.Apply(1L);
-#line 26 "D:\\Q#\\Pws\\Bell\\Operation.qs"
+#line 26 "D:\\git\\portofolio\\portfolio\\Bell\\Bell.qs"
             foreach (var test in new Range(1L, count))
             {
-#line 28 "D:\\Q#\\Pws\\Bell\\Operation.qs"
+#line 28 "D:\\git\\portofolio\\portfolio\\Bell\\Bell.qs"
                 Set.Apply((initial, qubits[0L]));
-#line 30 "D:\\Q#\\Pws\\Bell\\Operation.qs"
+#line 30 "D:\\git\\portofolio\\portfolio\\Bell\\Bell.qs"
                 MicrosoftQuantumPrimitiveH.Apply(qubits[0L]);
-#line 32 "D:\\Q#\\Pws\\Bell\\Operation.qs"
+#line 32 "D:\\git\\portofolio\\portfolio\\Bell\\Bell.qs"
                 var res = M.Apply(qubits[0L]);
                 // Count the number of ones we saw:
-#line 35 "D:\\Q#\\Pws\\Bell\\Operation.qs"
+#line 35 "D:\\git\\portofolio\\portfolio\\Bell\\Bell.qs"
                 if ((res == Result.One))
                 {
-#line 37 "D:\\Q#\\Pws\\Bell\\Operation.qs"
+#line 37 "D:\\git\\portofolio\\portfolio\\Bell\\Bell.qs"
                     numOnes = (numOnes + 1L);
                 }
             }
 
-#line 40 "D:\\Q#\\Pws\\Bell\\Operation.qs"
+#line 40 "D:\\git\\portofolio\\portfolio\\Bell\\Bell.qs"
             Set.Apply((Result.Zero, qubits[0L]));
 #line hidden
             Release.Apply(qubits);
             // Return number of times we saw a |0> and number of times we saw a |1>
-#line 43 "D:\\Q#\\Pws\\Bell\\Operation.qs"
+#line 43 "D:\\git\\portofolio\\portfolio\\Bell\\Bell.qs"
             return ((count - numOnes), numOnes);
         }
 
